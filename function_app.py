@@ -29,8 +29,8 @@ def synapseTrigger(req: func.HttpRequest) -> func.HttpResponse:
         files_json.append({
             "name": path.name,
             "is_directory": path.is_directory,
-            "last_modified": str(path.last_modified),
-            "content_length": path.content_length
+            "last_modified": str(path.last_modified)
+            
         })
     result = json.dumps(files_json, indent=4)
     return result
